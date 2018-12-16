@@ -354,6 +354,10 @@ int main(int argc, char const *argv[]) {
   // frequency and support for class B is spotty and untested, so this
   // frequency is not configured here.
 
+  // Modifications to operate on AU915 sub-band 2
+  #elif defined(CFG_au921)
+  Serial.println(F("Loading AU915 Configuration..."));
+  LMIC_selectSubBand(1); // Set to AU915 sub-band 2
 
   // Disable link check validation
   
